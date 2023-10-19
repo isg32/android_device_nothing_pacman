@@ -133,6 +133,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+PRODUCT_PACKAGES += \
+    libdrm.vendor \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
