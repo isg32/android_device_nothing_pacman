@@ -149,6 +149,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_USES_METADATA_PARTITION := true
 
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 # Platform
 BOARD_HAS_MTK_HARDWARE := true
 TARGET_BOARD_PLATFORM := mt6886
