@@ -213,6 +213,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayPacman \
     FrameworkOverlayPacman \
     LineageSettingsOverlayPacman \
+    LineagePowerOffAlarmOverlayPacman \
     SettingsProviderOverlayPacman \
     SystemUIOverlayPacman \
     TelephonyOverlayPacman \
