@@ -220,6 +220,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayPacman \
     FrameworkOverlayPacman \
     LineagePowerOffAlarmOverlayPacman \
+    LineageSDKOverlayPacman \
     LineageSettingsOverlayPacman \
     SettingsOverlayPacman \
     SettingsProviderOverlayPacman \
