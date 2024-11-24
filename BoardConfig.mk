@@ -172,6 +172,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# USB
+$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
