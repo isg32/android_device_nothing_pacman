@@ -49,6 +49,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 420
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
 
