@@ -48,6 +48,10 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 420
 
+# HIDL
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
+
 # Kernel
 BOARD_KERNEL_BASE := 0x3fff8000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
