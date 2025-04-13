@@ -137,6 +137,9 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# Fastboot
+TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
