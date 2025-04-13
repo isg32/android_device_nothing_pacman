@@ -1,4 +1,20 @@
 <compatibility-matrix version="5.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.trustonic.tee</name>
+        <version>1.1</version>
+        <interface>
+            <name>ITee</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.trustonic.tee.tui</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITui</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.radio.modem</name>
         <interface>
@@ -50,43 +66,6 @@
             <instance>vibratorfeature</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>com.fingerprints.extension</name>
-        <version>3.0</version>
-        <interface>
-            <name>IFingerprintNavigation</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IFingerprintSensorTest</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.dolby.hardware.dms</name>
-        <version>2.0</version>
-        <interface>
-            <name>IDms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.aee</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IAee</name>
-            <instance>AEE</instance>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <version>2.0</version>
-        <interface>
-            <name>IApmService</name>
-            <instance>apm_hidl_service</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.apuware.apusys</name>
         <interface>
@@ -99,14 +78,6 @@
         <version>2.0</version>
         <interface>
             <name>IApuwareUtils</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.atci</name>
-        <version>1.0</version>
-        <interface>
-            <name>IAtcid</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -142,6 +113,13 @@
             <instance>internal/0</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.camera.isphal</name>
         <version>1.0-1</version>
@@ -155,77 +133,6 @@
         <version>1.0</version>
         <interface>
             <name>IComposerExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <version>1.0-2</version>
-        <interface>
-            <name>IDmcService</name>
-            <instance>dmc_hidl_service</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <interface>
-            <name>IEmds</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.mediatek.hardware.gnss.batching</name>
-        <interface>
-            <name>IMtkGnssBatching</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.lbs</name>
-        <version>1.0</version>
-        <interface>
-            <name>ILbs</name>
-            <instance>AgpsDebugInterface</instance>
-            <instance>AgpsInterface</instance>
-            <instance>mtk_agps2framework</instance>
-            <instance>mtk_agpsd2debugService</instance>
-            <instance>mtk_debugService2agpsd</instance>
-            <instance>mtk_debugService2mnld</instance>
-            <instance>mtk_framework2agps</instance>
-            <instance>mtk_jam2mnl</instance>
-            <instance>mtk_lbs_log_v2s</instance>
-            <instance>mtk_lppe_socket_agps</instance>
-            <instance>mtk_lppe_socket_bt</instance>
-            <instance>mtk_lppe_socket_ipaddr</instance>
-            <instance>mtk_lppe_socket_lbs</instance>
-            <instance>mtk_lppe_socket_network</instance>
-            <instance>mtk_lppe_socket_sensor</instance>
-            <instance>mtk_lppe_socket_wlan</instance>
-            <instance>mtk_meta2mnld</instance>
-            <instance>mtk_mnl2jam</instance>
-            <instance>mtk_mnld2debugService</instance>
-            <instance>mtk_mnld2mtklogger</instance>
-            <instance>mtk_mnld2nlputils</instance>
-            <instance>mtk_mtklogger2mnld</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.log</name>
-        <version>1.0</version>
-        <interface>
-            <name>ILog</name>
-            <instance>ATMWiFiHidlServer</instance>
-            <instance>ConnsysFWHidlServer</instance>
-            <instance>LoggerHidlServer</instance>
-            <instance>MobileLogHidlServer</instance>
-            <instance>ModemLogHidlServer</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <version>1.0</version>
-        <interface>
-            <name>IMDMonitorService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -261,13 +168,6 @@
         </interface>
         <interface>
             <name>IMtkPower</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.mediatek.hardware.mtkpower_applist</name>
-        <interface>
-            <name>IMtkpower_applist</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -359,17 +259,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.nwk_opt</name>
-        <version>1.0</version>
-        <interface>
-            <name>INwkOpt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.pq_aidl</name>
-        <version>1-3</version>
+        <version>1-2</version>
         <interface>
             <name>IPictureQuality_AIDL</name>
             <instance>default</instance>
@@ -381,6 +273,36 @@
         <interface>
             <name>IMmlpq</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.lbs</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILbs</name>
+            <instance>AgpsDebugInterface</instance>
+            <instance>AgpsInterface</instance>
+            <instance>mtk_agps2framework</instance>
+            <instance>mtk_agpsd2debugService</instance>
+            <instance>mtk_debugService2agpsd</instance>
+            <instance>mtk_debugService2mnld</instance>
+            <instance>mtk_framework2agps</instance>
+            <instance>mtk_lbs_log_v2s</instance>
+            <instance>mtk_lppe_socket_agps</instance>
+            <instance>mtk_lppe_socket_bt</instance>
+            <instance>mtk_lppe_socket_ipaddr</instance>
+            <instance>mtk_lppe_socket_lbs</instance>
+            <instance>mtk_lppe_socket_network</instance>
+            <instance>mtk_lppe_socket_sensor</instance>
+            <instance>mtk_lppe_socket_wlan</instance>
+            <instance>mtk_meta2mnld</instance>
+            <instance>mtk_mnld2debugService</instance>
+            <instance>mtk_mnld2mtklogger</instance>
+            <instance>mtk_mnld2nlputils</instance>
+            <instance>mtk_mtklogger2mnld</instance>
+            <instance>mtk_jam2mnl</instance>
+            <instance>mtk_mnl2jam</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -396,14 +318,6 @@
         <version>2.0</version>
         <interface>
             <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.sla.service</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISlaService</name>
             <instance>default</instance>
         </interface>
     </hal>

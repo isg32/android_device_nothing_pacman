@@ -120,38 +120,6 @@
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.aee</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IAee</name>
-            <instance>AEE</instance>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IAee/AEE</fqname>
-        <fqname>@1.1::IAee/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IApmService</name>
-            <instance>apm_hidl_service</instance>
-        </interface>
-        <fqname>@2.0::IApmService/apm_hidl_service</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.atci</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAtcid</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAtcid/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IBluetoothAudioProvidersFactory/default</fqname>
@@ -181,52 +149,6 @@
         <fqname>@1.0::IComposerExt/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IDmcService</name>
-            <instance>dmc_hidl_service</instance>
-        </interface>
-        <fqname>@1.2::IDmcService/dmc_hidl_service</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <interface>
-            <name>IEmds</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>IEmds/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.log</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILog</name>
-            <instance>ATMWiFiHidlServer</instance>
-            <instance>ConnsysFWHidlServer</instance>
-            <instance>LoggerHidlServer</instance>
-            <instance>MobileLogHidlServer</instance>
-            <instance>ModemLogHidlServer</instance>
-        </interface>
-        <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
-        <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
-        <fqname>@1.0::ILog/LoggerHidlServer</fqname>
-        <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
-        <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMDMonitorService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMDMonitorService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.mmagent</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IMMAgent/default</fqname>
@@ -239,15 +161,6 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
         <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IMtkPerf</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IMtkPower</name>
-            <instance>default</instance>
-        </interface>
         <fqname>@1.2::IMtkPerf/default</fqname>
         <fqname>@1.2::IMtkPower/default</fqname>
     </hal>
@@ -301,24 +214,29 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::INvram/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.nwk_opt</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INwkOpt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INwkOpt/default</fqname>
-    </hal>
     <hal format="aidl">
         <name>vendor.mediatek.hardware.pq_aidl</name>
-        <version>3</version>
+        <version>2</version>
         <fqname>IPictureQuality_AIDL/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IVideoTelephony/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::INqNfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::ITee/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee.tui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ITui/default</fqname>
     </hal>
 </manifest>
