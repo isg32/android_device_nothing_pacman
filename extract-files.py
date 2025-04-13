@@ -20,6 +20,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/nothing/pacman',
     'hardware/mediatek'
 ]
 
