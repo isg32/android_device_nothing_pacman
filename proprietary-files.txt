@@ -1691,3 +1691,4 @@ vendor/lib64/APUWareApusysAidlServer.so
 vendor/lib64/libntcamalloctor.so
 vendor/lib64/libalacdec_mtk.so
 vendor/lib64/libmvpu_runtime_builtin.so
+vendor/lib64/libmtkperf_client_vendor.so

@@ -48,11 +48,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common@6.0-util \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio@6.0.vendor \
-    android.hardware.audio@7.1-impl \
-    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio@7.1-impl:64 \
+    android.hardware.soundtrigger@2.3-impl:64 \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
@@ -141,7 +139,7 @@ PRODUCT_COPY_FILES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
 # GNSS
