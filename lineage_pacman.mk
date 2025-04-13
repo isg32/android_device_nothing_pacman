@@ -24,10 +24,9 @@ PRODUCT_SYSTEM_NAME := pacman_global
 PRODUCT_SYSTEM_DEVICE := pacman
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sys_mssi_64_ww_armv82-user 15 AP3A.240617.008 2409232135 release-keys" \
-    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
-    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
-
-BUILD_FINGERPRINT := Nothing/PacmanIND/Pacman:15/AP3A.240617.008/2409232135:user/release-keys
+    BuildDesc="sys_mssi_64_ww_armv82-user 14 UP1A.231005.007 2408281906 release-keys" \
+    BuildFingerprint=Nothing/PacmanIND/Pacman:13/TP1A.220624.014/2408281906:user/release-keys \
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
