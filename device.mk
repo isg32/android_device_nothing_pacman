@@ -47,6 +47,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Overlay
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayPacman \
+    FrameworkOverlayPacman \
+    SystemUIOverlayPacman \
+    TelephonyOverlayPacman \
+    TetheringOverlayPacman \
+    WifiOverlayPacman
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
