@@ -173,6 +173,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2023-10-05
+
 # USB
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
