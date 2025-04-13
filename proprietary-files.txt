@@ -37,14 +37,6 @@ vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
 vendor/lib64/libvow_comp_test.so
 
-# Audio (Aurisys)
-vendor/etc/aurisys_config.xml
-vendor/etc/aurisys_config_hifi3.xml
-vendor/etc/aurisys_config_rv.xml
-
-# Audio (Device)
-vendor/etc/audio_device.xml
-
 #  Audio (LVACFS)
 vendor/etc/lvacfs_params/1mic/LVACFS_Calibration_1mic.dat
 vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
