@@ -282,7 +282,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayPacman \
     FrameworkOverlayPacman \
-    LineageSettingsOverlayPacman \
     LineagePowerOffAlarmOverlayPacman \
     SettingsProviderOverlayPacman \
     SystemUIOverlayPacman \
