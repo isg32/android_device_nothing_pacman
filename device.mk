@@ -51,6 +51,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayPacman \
     FrameworkOverlayPacman \
+    SettingsProviderOverlayPacman \
     SystemUIOverlayPacman \
     TelephonyOverlayPacman \
     TetheringOverlayPacman \
