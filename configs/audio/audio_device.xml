@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <card name="mt6886mt6368" />
-    <outputdevice name="RCV_OUT" path="I2S3" />
-    <outputdevice name="SPK_OUT" path="I2S3" />
-    <outputdevice name="VOICE_SPK_OUT" path="I2S3" />
+    <!-- #ifdef NT_EDIT -->
+    <!-- add to new_feature AERO-4 -->
+    <!-- receiver device: smartPA at I2S3 -->
+    <outputdevice name="RCV_OUT" path="I2S3"/>
+    <!-- #endif /* NT_EDIT */ -->
     <mixercontrol>
         <versioncontrol value="1.01">
         </versioncontrol>
         <!-- "kctl name" are the initial mixer settings -->
         <!-- <kctl name="XXXX" value="XXXX" /> -->
-        <!-- SmartPA Preload Start -->
-        <kctl name="aw_dev_1_prof" value="Music" />
-        <kctl name="aw_dev_1_switch" value="Disable" />
-        <kctl name="aw_dev_0_prof" value="Music" />
-        <kctl name="aw_dev_0_switch" value="Disable" />
-        <!-- SmartPA Preload End -->
         <!--headphone output-->
         <path name="headphone_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
@@ -32,64 +28,34 @@
         <path name="HP_IMPEDANCE" value="turnoff">
             <kctl name="HPL Mux" value="Open" />
         </path>
+        <!-- #ifdef NT_EDIT -->
+        <!-- add for new_feature AERO-103 -->
+        <!-- receiver output path kcontrols: only top PA works -->
         <!--receiver output-->
-        <path name="receiver_output" value="turnon">
-            <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="RCV Mux" value="Voice Playback" />
-        </path>
-        <path name="receiver_output" value="turnoff">
-            <kctl name="RCV Mux" value="Open" />
-        </path>
-         <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
-            <kctl name="aw_dev_0_prof" value="Receiver" />
-            <kctl name="aw_dev_0_switch" value="Enable" />
-            <kctl name="aw_dev_1_switch" value="Disable" />
+        <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
+            <kctl name="TFA_CHIP_SELECTOR" value="1"/>
+            <kctl name="TFA Profile" value="receiver"/>
         </path>
         <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnoff">
-            <kctl name="aw_dev_1_switch" value="Disable" />
-            <kctl name="aw_dev_0_switch" value="Disable" />
-            <kctl name="aw_dev_0_prof" value="Music" />
+            <kctl name="TFA_CHIP_SELECTOR" value="0"/>
+            <kctl name="TFA Profile" value="speaker"/>
         </path>
-        <path name="SPK_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
-            <kctl name="aw_dev_0_prof" value="Music" />
-            <kctl name="aw_dev_0_switch" value="Enable" />
-            <kctl name="aw_dev_1_prof" value="Music" />
-            <kctl name="aw_dev_1_switch" value="Enable" />
+        <!-- #endif /* NT_EDIT */ -->
+        <path name="receiver_output" value="turnon">
+            <!-- #ifdef NT_EDIT -->
+            <!-- remove to new_feature AERO-4 -->
+            <!-- remove the MTK original rcv control -->
+            <!-- kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="RCV Mux" value="Voice Playback" / -->
+            <!-- #endif /* NT_EDIT */ -->
         </path>
-        <path name="SPK_OUT_DEVICE_CTRL_PRE_PMU" value="turnoff">
-            <kctl name="aw_dev_1_switch" value="Disable" />
-            <kctl name="aw_dev_1_prof" value="Music" />
-            <kctl name="aw_dev_0_switch" value="Disable" />
-            <kctl name="aw_dev_0_prof" value="Music" />
+        <path name="receiver_output" value="turnoff">
+            <!-- #ifdef NT_EDIT -->
+            <!-- remove to new_feature AERO-4 -->
+            <!-- remove the MTK original rcv control @{-->
+            <!-- kctl name="RCV Mux" value="Open" / -->
+            <!-- #endif /* NT_EDIT */ -->
         </path>
-        <path name="VOICE_SPK_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
-            <kctl name="aw_dev_0_prof" value="Voice" />
-            <kctl name="aw_dev_0_switch" value="Enable" />
-            <kctl name="aw_dev_1_prof" value="Voice" />
-            <kctl name="aw_dev_1_switch" value="Enable" />
-        </path>
-        <path name="VOICE_SPK_OUT_DEVICE_CTRL_PRE_PMU" value="turnoff">
-            <kctl name="aw_dev_1_switch" value="Disable" />
-            <kctl name="aw_dev_1_prof" value="Music" />
-            <kctl name="aw_dev_0_switch" value="Disable" />
-            <kctl name="aw_dev_0_prof" value="Music" />
-        </path>
-        <path name="speaker_output_top" value="turnon">
-         <kctl name="aw_dev_0_switch" value="Enable" />
-         <kctl name="aw_dev_1_switch" value="Disable" />
-         </path>
-         <path name="speaker_output_top" value="turnoff">
-         <kctl name="aw_dev_1_switch" value="Disable" />
-         <kctl name="aw_dev_0_switch" value="Disable" />
-         </path>
-         <path name="speaker_output_bottom" value="turnon">
-         <kctl name="aw_dev_0_switch" value="Disable" />
-         <kctl name="aw_dev_1_switch" value="Enable" />
-         </path>
-         <path name="speaker_output_bottom" value="turnoff">
-         <kctl name="aw_dev_1_switch" value="Disable" />
-         <kctl name="aw_dev_0_switch" value="Disable" />
-         </path>
        <!-- 2-in-1 speaker output-->
         <path name="two_in_one_speaker_output" value="turnon">
         </path>
@@ -2070,20 +2036,12 @@
             <kctl name="UL5_CH2 ADDA_UL_CH3" value="0" />
         </path>
         <path name="ultrasound-proximity" value="turnon">
-            <kctl name="Ultrasound Mode" value="1462" />
-            <kctl name="Ultrasound Log Level" value="3" />
         </path>
         <path name="ultrasound-proximity" value="turnoff">
-          <kctl name="Ultrasound Mode" value="1462" />
-          <kctl name="Ultrasound Log Level" value="0" />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnon">
-            <kctl name="Ultrasound Mode" value="1458" />
-            <kctl name="Ultrasound Log Level" value="3" />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnoff">
-          <kctl name="Ultrasound Mode" value="1458" />
-          <kctl name="Ultrasound Log Level" value="0" />
         </path>
     </mixercontrol>
 </root>
