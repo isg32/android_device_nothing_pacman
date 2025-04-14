@@ -113,10 +113,6 @@
 /sys/devices/system/cpu/cpu* cpufreq/sugov_ext/down_rate_limit_us 0664 system system
 /sys/devices/system/cpu/cpu* cpufreq/sugov_ext/up_rate_limit_us 0664 system system
 
-#elliptic sensor
-/dev/elliptic0            0644   system     system
-/dev/elliptic1            0644   system     system
-
 # add the read write right of ttyUSB*
 /dev/bus/usb/*     	  0660   root       usb
 /dev/ttyUSB0              0660   radio      radio
