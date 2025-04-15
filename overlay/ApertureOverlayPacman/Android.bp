@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsProviderOverlayPacman",
-    vendor: true,
+    name: "ApertureOverlayPacman",
+    product_specific: true,
 }

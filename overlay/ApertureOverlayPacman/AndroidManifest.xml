@@ -3,8 +3,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.overlay.pacman">
-    <overlay android:targetPackage="com.android.settings"
+    package="org.lineageos.aperture.pacman">
+    <overlay android:targetPackage="org.lineageos.aperture"
                    android:isStatic="true"
                    android:priority="1000"/>
 </manifest>

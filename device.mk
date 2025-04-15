@@ -216,9 +216,11 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayPacman \
     CarrierConfigOverlayPacman \
     FrameworkOverlayPacman \
     LineagePowerOffAlarmOverlayPacman \
+    LineageSettingsOverlayPacman \
     SettingsOverlayPacman \
     SettingsProviderOverlayPacman \
     SystemUIOverlayPacman \
