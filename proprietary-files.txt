@@ -48,6 +48,16 @@ vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
 
+# Audio Fx
+vendor/lib64/soundfx/libdiraceffect_NT.so
+vendor/lib64/soundfx/libdynproc.so
+vendor/lib64/libdirac.so
+vendor/lib64/soundfx/libdownmix.so
+vendor/lib64/soundfx/libeffectproxy.so
+vendor/lib64/soundfx/libldnhncr.so
+vendor/lib64/soundfx/libreverbwrapper.so
+vendor/lib64/soundfx/libvisualizer.so
+
 #  Audio (LVACFS)
 vendor/etc/lvacfs_params/1mic/LVACFS_Calibration_1mic.dat
 vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
@@ -1392,6 +1402,7 @@ vendor/etc/command.csv
 vendor/etc/task_profiles.json
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek
+vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/mtkpower_applist-mtk-default.rc
