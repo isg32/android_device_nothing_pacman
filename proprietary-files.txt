@@ -1,5 +1,5 @@
 # All proprietary files from this list, unless pinned and noted otherwise,
-# are from Nothing Phone 2A (Pacman_V2.6-231005).
+# are from Nothing Phone 2A (Pacman_V3.0-240617).
 
 # AEE
 vendor/lib/libaedv.so
@@ -243,14 +243,17 @@ vendor/etc/md/cacerts/ikev2/GeoTrust_Primary_CA.der
 vendor/etc/md/cacerts/ikev2/GeoTrust_Primary_CA_G2_ECC.der
 vendor/etc/md/cacerts/ikev2/GlobalSign_root_CA.crt
 vendor/etc/md/cacerts/ikev2/LibertyGlobalEnterprise-Root-CA-G1.crt
-vendor/etc/md/cacerts/ikev2/Root-R3.cer
 vendor/etc/md/cacerts/ikev2/Root_CA_1003.crt
+vendor/etc/md/cacerts/ikev2/Root-R3.cer
+vendor/etc/md/cacerts/ikev2/thawte.der
 vendor/etc/md/cacerts/ikev2/USERTrustRSACertificationAuthority.crt
 vendor/etc/md/cacerts/ikev2/VeriSignClass3G4.der
 vendor/etc/md/cacerts/ikev2/VeriSignClass3G5.der
 vendor/etc/md/cacerts/ikev2/VeriSignUniversalRootCertification.der
-vendor/etc/md/cacerts/ikev2/thawte.der
 vendor/etc/md/cacerts/tls/AAACertificateServices.crt
+vendor/etc/md/cacerts/tls/certSIGN_ROOT_CA.crt
+vendor/etc/md/cacerts/tls/certSIGNROOTCAG2.cer
+vendor/etc/md/cacerts/tls/certSIGNWebCA.cer
 vendor/etc/md/cacerts/tls/CertumCA.crt
 vendor/etc/md/cacerts/tls/CertumOrganizationValidationCASHA2.crt
 vendor/etc/md/cacerts/tls/CertumTrustedNetworkCA.crt
@@ -271,9 +274,6 @@ vendor/etc/md/cacerts/tls/StaatDerNederlandenEVRootCA.crt
 vendor/etc/md/cacerts/tls/StaatderNederlandenOrganisatieServicesCA-G3.cer
 vendor/etc/md/cacerts/tls/StaatderNederlandenRootCA-G3.cer
 vendor/etc/md/cacerts/tls/USERTrustRSACertificationAuthority.crt
-vendor/etc/md/cacerts/tls/certSIGNROOTCAG2.cer
-vendor/etc/md/cacerts/tls/certSIGNWebCA.cer
-vendor/etc/md/cacerts/tls/certSIGN_ROOT_CA.crt
 vendor/etc/security/cacerts/01419da9.0
 vendor/etc/security/cacerts/04f60c28.0
 vendor/etc/security/cacerts/0d69c7e1.0
@@ -372,7 +372,6 @@ vendor/etc/security/cacerts/c491639e.0
 vendor/etc/security/cacerts/c51c224c.0
 vendor/etc/security/cacerts/c559d742.0
 vendor/etc/security/cacerts/c90bc37d.0
-vendor/etc/security/cacerts/cb156124.0
 vendor/etc/security/cacerts/cb1c3204.0
 vendor/etc/security/cacerts/ccc52f49.0
 vendor/etc/security/cacerts/cf701eeb.0
@@ -400,20 +399,6 @@ vendor/etc/security/cacerts/f459871d.0
 vendor/etc/security/cacerts/fb5fa911.0
 vendor/etc/security/cacerts/fd08c599.0
 vendor/etc/security/cacerts/fde84897.0
-vendor/etc/security/cacerts_supl/lab/18dc3a8d.0
-vendor/etc/security/cacerts_supl/lab/1bc5ca0c.0
-vendor/etc/security/cacerts_supl/lab/1bc5ca0c.1
-vendor/etc/security/cacerts_supl/lab/2cbfcc3a.0
-vendor/etc/security/cacerts_supl/lab/35ef1c14.0
-vendor/etc/security/cacerts_supl/lab/399e7759.0
-vendor/etc/security/cacerts_supl/lab/586933d9.0
-vendor/etc/security/cacerts_supl/lab/6146415b.0
-vendor/etc/security/cacerts_supl/lab/66272d0d.0
-vendor/etc/security/cacerts_supl/lab/6f1dbe5e.0
-vendor/etc/security/cacerts_supl/lab/b5805141.0
-vendor/etc/security/cacerts_supl/lab/b805b58a.0
-vendor/etc/security/cacerts_supl/lab/ed7b215e.0
-vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
 vendor/etc/security/cacerts_supl/09127afb.0
 vendor/etc/security/cacerts_supl/09127afb.1
 vendor/etc/security/cacerts_supl/09127afb.2
@@ -431,6 +416,20 @@ vendor/etc/security/cacerts_supl/7651b327.0
 vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/e99505d2.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
+vendor/etc/security/cacerts_supl/lab/18dc3a8d.0
+vendor/etc/security/cacerts_supl/lab/1bc5ca0c.0
+vendor/etc/security/cacerts_supl/lab/1bc5ca0c.1
+vendor/etc/security/cacerts_supl/lab/2cbfcc3a.0
+vendor/etc/security/cacerts_supl/lab/35ef1c14.0
+vendor/etc/security/cacerts_supl/lab/399e7759.0
+vendor/etc/security/cacerts_supl/lab/586933d9.0
+vendor/etc/security/cacerts_supl/lab/6146415b.0
+vendor/etc/security/cacerts_supl/lab/66272d0d.0
+vendor/etc/security/cacerts_supl/lab/6f1dbe5e.0
+vendor/etc/security/cacerts_supl/lab/b5805141.0
+vendor/etc/security/cacerts_supl/lab/b805b58a.0
+vendor/etc/security/cacerts_supl/lab/ed7b215e.0
+vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
 
 # Camera
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
@@ -1007,7 +1006,6 @@ vendor/lib/hw/mt6886/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLI
 vendor/lib/hw/mt6886/gralloc.common.so;SYMLINK=vendor/lib/hw/gralloc.common.so
 vendor/lib/hw/mt6886/vendor.mediatek.hardware.pq_aidl-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.pq_aidl-impl.so
 vendor/lib/hw/mt6886/vulkan.mali.so;SYMLINK=vendor/lib/hw/vulkan.mali.so
-vendor/lib/mt6886/arm.graphics-V2-ndk.so;SYMLINK=vendor/lib/arm.graphics-V2-ndk.so
 vendor/lib/mt6886/arm.graphics-V3-ndk.so;SYMLINK=vendor/lib/arm.graphics-V3-ndk.so
 vendor/lib/mt6886/arm.mali.platform-V1-ndk.so;SYMLINK=vendor/lib/arm.mali.platform-V1-ndk.so
 vendor/lib/mt6886/libaal_cust_func.so;SYMLINK=vendor/lib/libaal_cust_func.so
@@ -1062,7 +1060,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib/vendor.mediatek.hardware.pq_aidl-V1-ndk.so
 vendor/lib64/hw/mt6886/vendor.mediatek.hardware.pq_aidl-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
-vendor/lib64/mt6886/arm.graphics-V2-ndk.so;SYMLINK=vendor/lib64/arm.graphics-V2-ndk.so
 vendor/lib64/mt6886/arm.mali.platform-V1-ndk.so;SYMLINK=vendor/lib64/arm.mali.platform-V1-ndk.so
 vendor/lib64/mt6886/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
 vendor/lib64/mt6886/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
@@ -1391,12 +1388,21 @@ vendor/etc/power_app_cfg.xml
 vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
 vendor/etc/xgf.cfg
-vendor/lib64/android.hardware.power-service-mediatek.so
+vendor/etc/command.csv
+vendor/etc/task_profiles.json
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+vendor/etc/init/mtkpower_applist-mtk-default.rc
+vendor/lib64/hw/power.default.so
+vendor/lib64/libpowerhal.so
+vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib64/libpower_timer.so
+vendor/lib64/libpowerhalwrap_vendor.so
+vendor/lib64/libmtkperf_client_vendor.so
+vendor/lib64/lib_power_applist.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.power@1.1.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
-vendor/lib64/vendor.noth.hardware.charge-V1-ndk.so
-
 
 # Radio
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
@@ -1405,8 +1411,8 @@ vendor/bin/bip_ap
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/muxreport
-vendor/etc/apdb/APDB_MT6886___W2338
-vendor/etc/apdb/APDB_MT6886___W2338_ENUM
+vendor/etc/apdb/APDB_MT6886___W2426
+vendor/etc/apdb/APDB_MT6886___W2426_ENUM
 vendor/etc/init/init.bip_ap.rc
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
@@ -1689,6 +1695,11 @@ vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so
 vendor/lib64/libcodec2_vpp_AISR_plugin.so
 vendor/lib64/liblvacfs_wrapper.so
 vendor/lib64/libmvpu_runtime_builtin.so
-vendor/lib64/libntcamalloctor.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/soundfx/libspatializer.so
+vendor/lib64/vendor.noth.hardware.charge-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.power@1.1.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+vendor/lib64/mt6886/s5kjn1front_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/s5kjn1front_mipi_raw_IdxMgr.so
+vendor/lib64/libntcampipepb.so
+vendor/lib64/libntcamallocator.so
