@@ -71,7 +71,7 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock')
         .add_needed('libbase_shim.so'),
-    ('vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so', 'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so'): blob_fixup()
+    ('vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so', 'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so', 'vendor/lib64/hw/hwcomposer.mtk_common.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/bin/hw/vendor.noth.hardware.charge-service'): blob_fixup()
         .add_needed('libbase_shim.so'),
