@@ -70,6 +70,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    ('vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so', 'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so'): blob_fixup()
+         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so', 'vendor/lib64/libcodec2_vpp_AISR_plugin.so'): blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
