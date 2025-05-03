@@ -1308,33 +1308,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 # Power
 vendor/bin/hw/vendor.noth.hardware.camera-service;DISABLE_DEPS
 vendor/bin/hw/vendor.noth.hardware.charge-service
-vendor/bin/fpsgo
-vendor/bin/gbe
-vendor/etc/init/bootperf.rc
-vendor/etc/init/fpsgo.rc
-vendor/etc/init/gbe.rc
-vendor/etc/init/init.fpsgo.rc
-vendor/etc/gbe.cfg
-vendor/etc/power_app_cfg.xml
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
-vendor/etc/xgf.cfg
-vendor/etc/command.csv
-vendor/etc/task_profiles.json
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek
-vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/etc/init/mtkpower_applist-mtk-default.rc
-vendor/lib64/hw/power.default.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
-vendor/lib64/libpower_timer.so
-vendor/lib64/libpowerhalwrap_vendor.so
-vendor/lib64/libmtkperf_client_vendor.so
-vendor/lib64/lib_power_applist.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
 
 # Radio
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
