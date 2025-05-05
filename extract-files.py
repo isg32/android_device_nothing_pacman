@@ -45,8 +45,6 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('ImsService-patches/'),
-    'system_ext/lib64/libsink.so': blob_fixup()
-        .add_needed('libshim_sink.so'),
     'system_ext/lib64/libsource.so': blob_fixup()
         .add_needed('libui_shim.so'),
     'vendor/bin/hw/android.hardware.graphics.composer@3.1-service': blob_fixup()
@@ -71,6 +69,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock')
         .add_needed('libbase_shim.so'),
+    'vendor/lib64/libneuron_adapter_mc.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_describe'),
     ('vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so', 'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so', 'vendor/lib64/hw/hwcomposer.mtk_common.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/bin/hw/vendor.noth.hardware.charge-service'): blob_fixup()

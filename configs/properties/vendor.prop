@@ -8,22 +8,23 @@ ro.vendor.mgvi_name=mgvi_64_armv82
 apexd.config.dm_create.timeout=10000
 
 # Audio
-AUDIO_FEATURE_REVERSE_MIC_DIRECTION_SUPPORT=true
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
-persist.vendor.audio.auto.scenario=true
-ro.audio.monitorRotation=true
-ro.vendor.audio.dolby.dax.support=true
-ro.vendor.audio.scenario.support=true
-ro.vendor.audio.soundfx.type=mi
-ro.vendor.audio.soundfx.usb=true
+persist.vendor.audio.usb.offload=true
+persist.vendor.debug_policy.ready=1
+persist.vendor.debug_policy=minidump
+persist.vendor.newdirac.cur.config=MUSIC
+persist.vendor.newdirac.dump=0
+persist.vendor.newdirac.enable.value=1.000000
+persist.vendor.newdirac.volume.value=0.000000
+ro.vendor.mtk_audio_tuning_tool_ver=V1
+ro.vendor.mtk_hifiaudio_support=1
+vendor.audio.powerhal.power.dl=true
 vendor.audio.powerhal.power.ul=true
 vendor.audio.usb.iems.period_us=5000
-vendor.audio.usb.super_hifi=true
-vendor.audiohal.telephonytx.type=2
 
 # Bluetooth
 bluetooth.profile.bap.unicast.client.enabled=true
@@ -55,14 +56,18 @@ persist.vendor.camera3.pipeline.bufnum.min.low_ram.imgo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6
-ro.vendor.afbc.enable=2
 ro.vendor.camera.directfdyuv.support=1
-ro.vendor.camera.insensorzoom.support=0
+ro.vendor.camera.insensorzoom.support=1
 ro.vendor.camera.isp.support.colorspace=0
 ro.vendor.camera3.zsl.default=260
-ro.vendor.jpeg_decode_sw_opt=1
+ro.vendor.mtk_backlight_hwc_support=1
+ro.vendor.mtk_blulight_def_support=1
+ro.vendor.mtk_c2k_lte_mode=0
 ro.vendor.mtk_cam_security_support=1
-vendor.camera.sensor.logsystem=3
+ro.vendor.mtk_camera_app_version=3
+vendor.camera.mdp.cz.enable=1
+vendor.camera.mdp.dre.enable=1
+vendor.mtk.camera.app.fd.video=1
 
 # Conninfra
 persist.vendor.connsys.chipid=-1
@@ -130,7 +135,6 @@ ro.vendor.composer_version=3.1
 ro.vendor.displayfeature.dump=true
 ro.vendor.mml.mtk_mml_support=1
 ro.vendor.mtk_aod_support=1
-ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.mtk_blulight_def_support=1
 ro.vendor.mtk_cuva_hdr_support=1
 ro.vendor.mtk_hdr10p_adaptive_support=1
