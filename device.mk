@@ -59,11 +59,18 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.primary.default \
     audio.r_submix.default \
+    audio_policy.stub \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
-    libaudiopreprocessing
+    audioclient-types-aidl-cpp.vendor \
+    libalsautils \
+    libaudio_aidl_conversion_common_ndk.vendor \
+    android.hardware.audio.common-V1-ndk.vendor \
+    libnbaio_mono \
+    libtinycompress \
+    libxml2.vendor
 
 PRODUCT_PACKAGES += \
     MtkInCallService
