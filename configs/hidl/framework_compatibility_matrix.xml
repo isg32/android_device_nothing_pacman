@@ -29,6 +29,13 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.noth.hardware.sensor.sensor_extension</name>
+        <interface>
+            <name>ISensorExtension</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl">
         <name>vendor.mediatek.hardware.mtkpower_applist</name>
         <interface>
