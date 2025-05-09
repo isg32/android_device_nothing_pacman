@@ -709,7 +709,7 @@ vendor/lib64/mt6886/libmgr3a.adapt.so;SYMLINK=vendor/lib64/libmgr3a.adapt.so
 vendor/lib64/mt6886/libmmagent.so;SYMLINK=vendor/lib64/libmmagent.so
 vendor/lib64/mt6886/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
 vendor/lib64/mt6886/libmorpho_MotionSensor.so;SYMLINK=vendor/lib64/libmorpho_MotionSensor.so
-vendor/lib64/mt6886/libmorpho_video_stabilizer.so;SYMLINK=vendor/lib64/libmorpho_video_stabilizer.so
+vendor/lib64/mt6886/libmorpho_video_stabilizer.so;SYMLINK=vendor/lib64/libmorpho_video_stabilizer.so;DISABLE_DEPS
 vendor/lib64/mt6886/libmtkcam.atmseventmgr.so;SYMLINK=vendor/lib64/libmtkcam.atmseventmgr.so
 vendor/lib64/mt6886/libmtkcam.debugwrapper.so;SYMLINK=vendor/lib64/libmtkcam.debugwrapper.so
 vendor/lib64/mt6886/libmtkcam.eventcallback.so;SYMLINK=vendor/lib64/libmtkcam.eventcallback.so
@@ -923,6 +923,7 @@ vendor/lib64/libttm_nightsight_ae.so
 vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libwa_opticalzoomfactor.so
 vendor/lib64/libwa_sat.so
+vendor/lib64/vendor.noth.hardware.camera-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
