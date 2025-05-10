@@ -341,7 +341,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
+    android.hardware.vibrator.service.pacman
 
 # Wifi
 PRODUCT_PACKAGES += \
