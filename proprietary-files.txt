@@ -1609,6 +1609,9 @@ vendor/etc/init/wlan_assistant.rc
 vendor/firmware/wifi.cfg
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 
+# Richtap - from eqs 14-U1SQS34.52-21-1-10 504bf-893e0 release-keys
+vendor/lib64/libaacvibrator.so|a58aac68c3a3a964adfcda9bb948aa7eef089f58
+
 # Richtap config
 vendor/etc/aac_richtap.config
 
